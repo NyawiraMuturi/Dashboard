@@ -45,10 +45,6 @@ const Topbar = () => {
         </IconButton>
 
         <IconButton>
-        
-        </IconButton>
-
-        <IconButton>
           <PersonOutlineOutlined/>
         </IconButton>
       </Box>
