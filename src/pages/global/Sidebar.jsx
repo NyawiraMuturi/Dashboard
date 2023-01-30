@@ -37,15 +37,19 @@ const LeftSidebar = () => {
 
   return (
     <Box
+      width="400px"
       sx={{
         "& .pro-sidebar-inner": {
           background: `${colors.primary[400]} !important`,
         },
         "& .pro-icon-wrapper": {
           backgroundColor: "transparent !important",
+          marginRight: '10px'
         },
         "& .pro-inner-item": {
           padding: "5px 55px 5px 0px !important",
+          display: 'flex',
+          alignItems: 'center'
         },
         "& .pro-inner-item:hover": {
           color: "#868dfb !important",
@@ -75,7 +79,7 @@ const LeftSidebar = () => {
                 alignItems="center"
                 ml="15px"
               >
-                <Typography variant="h3" color={colors.grey[100]}>
+                <Typography variant="h3" color={colors.grey[100]} mr="5rem">
                   ADMINIS
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
@@ -115,7 +119,6 @@ const LeftSidebar = () => {
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
               display="flex"
-
               title="Dashboard"
               to="/"
               icon={<HomeOutlined/>}
@@ -126,7 +129,7 @@ const LeftSidebar = () => {
             <Typography
               variant="h6"
               color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: "15px 0 5px 0px" }}
             >
               Data
             </Typography>
@@ -155,7 +158,7 @@ const LeftSidebar = () => {
             <Typography
               variant="h6"
               color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: "15px 0 5px 0px" }}
             >
               Pages
             </Typography>
@@ -184,7 +187,7 @@ const LeftSidebar = () => {
             <Typography
               variant="h6"
               color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: "15px 0 5px 0px" }}
             >
               Charts
             </Typography>
