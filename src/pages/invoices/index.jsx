@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, useTheme} from '@mui/material'
+import { Box, Typography, useTheme} from '@mui/material'
 import {DataGrid} from '@mui/x-data-grid'
 import { tokens } from '../../theme'
 import {mockDataInvoices} from "../../data/mockData"
@@ -14,7 +14,11 @@ const Invoices = () => {
       {field: "id", headerName: "ID" },
       {field: "name", headerName: "Name", flex: 1, cellClassName:"name-xolumn--cell" },
       {field: "email", headerName: "Email", flex: 1 },
-      {field: "cost", headerName: "Cost", flex: 1 },
+      {field: "cost", headerName: "Cost", flex: 1 , 
+      renderCell:(params)=>(
+      <Typography color={colors.greenAccent[500]}>
+        ${params.row.cost}
+      </Typography>)},
       {field: "phone", headerName: "Phone", flex: 1 },
       {field: "date", headerName: "Date", flex: 1 },
     ]

@@ -118,12 +118,11 @@ const LeftSidebar = () => {
             </Box>
           )}
 
-          <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+          <Box paddingLeft={!isCollapsed ? undefined : "10%"}>
             <Link to="/">
               <Item
                 display="flex"
                 title="Dashboard"
-                
                 icon={<HomeOutlined/>}
                 selected={selected}
                 setSelected={setSelected}
