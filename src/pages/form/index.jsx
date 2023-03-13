@@ -17,7 +17,7 @@ const phoneRegex = /(\+\d{1,3}\s?)?((\(\d{3}\)\s?)|(\d{3})(\s|-?))(\d{3}(\s|-?))
 
 const userSchema = yup.object().shape({
     firstName: yup.string().required("required"),
-    lastname: yup.string().required("required"),
+    lastName: yup.string().required("required"),
     email: yup.string().email("invalid email").required("required"),
     contact: yup
         .string()
@@ -53,8 +53,92 @@ const Form = () => {
                             "& > div" : {gridColumn: isNonMobile ? undefined : "span 4"}
                         }}
                     >
-                        I am a form
+                       <TextField
+                            fullWidth
+                            variant='filled'
+                            type="text"
+                            label="First Name"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            value={values.firstName}
+                            name="firstName"
+                            error={!!touched.firstName && !!errors.firstName}
+                            helperText={touched.firstName && errors.firstName}
+                            sx={{gridColumn: "span 2"}}
+                       />
+
+                        <TextField
+                            fullWidth
+                            variant='filled'
+                            type="text"
+                            label="Last Name"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            value={values.lastName}
+                            name="lastName"
+                            error={!!touched.lastName && !!errors.lastName}
+                            helperText={touched.lastName && errors.lastName}
+                            sx={{gridColumn: "span 2"}}
+                        />
+
+                        <TextField
+                            fullWidth
+                            variant='filled'
+                            type="text"
+                            label="email"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            value={values.email}
+                            name="email"
+                            error={!!touched.email && !!errors.email}
+                            helperText={touched.email && errors.email}
+                            sx={{gridColumn: "span 4"}}
+                        />
+
+                        <TextField
+                            fullWidth
+                            variant='filled'
+                            type="text"
+                            label="Contact"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            value={values.contact}
+                            name="contact"
+                            error={!!touched.contact && !!errors.contact}
+                            helperText={touched.contact && errors.contact}
+                            sx={{gridColumn: "span 4"}}
+                        />
+
+                        <TextField
+                            fullWidth
+                            variant='filled'
+                            type="text"
+                            label="Address 1"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            value={values.address1}
+                            name="address1"
+                            error={!!touched.address1 && !!errors.address1}
+                            helperText={touched.address1 && errors.address1}
+                            sx={{gridColumn: "span 4"}}
+                        />
+
+                        <TextField
+                            fullWidth
+                            variant='filled'
+                            type="text"
+                            label="Address 2"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            value={values.address2}
+                            name="address2"
+                            error={!!touched.address2 && !!errors.address2}
+                            helperText={touched.address2 && errors.address2}
+                            sx={{gridColumn: "span 4"}}
+                        />
+                        
                     </Box>
+
                 </form>
             )}
         </Formik>
