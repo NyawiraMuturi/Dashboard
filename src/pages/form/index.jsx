@@ -139,6 +139,10 @@ const Form = () => {
                         
                     </Box>
 
+                    <Box display="flex" justifyContent="end" mt="20px">
+                        <Button type='subnit' color='secondary' variant='contained'>CREATE NEW USER</Button>
+                    </Box>
+
                 </form>
             )}
         </Formik>
